@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Contador from './components/01-Contador';
+import { Input } from './components/02-Input';
+import Lista from './components/03-Lista'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path='/input' element={<Input />} />
+        <Route path='/contador' element={<Contador />} />
+        <Route path='/lista' element={<Lista />} />
+      </Routes>
+    </>
   );
 }
 
